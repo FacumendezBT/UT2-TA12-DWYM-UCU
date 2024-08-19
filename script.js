@@ -4,14 +4,15 @@ const mayus = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const minus = mayus.toLowerCase();
 const simbolos = '!@#$%^&*()_+';
 
-const btn = document.getElementById('btn');
-const inputLength = document.getElementById('inputLength');
-const inputRes = document.getElementById('inputRes');
-btn.addEventListener('click', () => {
-    const length = inputLength.value;
-    inputRes.value = generatePassword(length);
-});
-
+window.onload = () => {
+    const btn = document.getElementById('btn');
+    const inputLength = document.getElementById('inputLength');
+    const inputRes = document.getElementById('inputRes');
+    btn.addEventListener('click', () => {
+        const length = inputLength.value;
+        inputRes.value = generatePassword(length);
+    });
+}
 
 /**
  * Función para generar una contraseña aleatoria
